@@ -13,6 +13,10 @@
 @import "./components/product-grid";
 @import "./components/title";
 @import "./components/product-new";
+@import "./components/sidebar";
+@import "./components/breadcrumb";
+@import "./components/pagination";
+@import "./components/catalog";
 
 // Import layouts styles
 @import "./layouts/header";
@@ -23,6 +27,10 @@
 // Import pages styles
 @import "./pages/index";
 
+//PageHome
 @import "./pages/pageHome/feature";
 @import "./pages/pageHome/sale";
 @import "./pages/pageHome/blog";
+
+//PageGrid
+@import "./pages/pageGrid/pageGrid";

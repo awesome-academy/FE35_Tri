@@ -68,8 +68,6 @@ mixin product-grid(img,sale,sl,h3,p_old,p_current)
         .product-grid__price
             span.product-grid__price--sale= p_old
             span.product-grid__price--old= p_current
-
-
 //-ProductSale
 mixin product-sale(img,h3,p_current)
     .product-sale__box
@@ -100,3 +98,29 @@ mixin blog-grid(img,time,h3,des)
             p= des
             .blog-grid__read-more
                 a(href="#") Đọc tiếp
+//- catalog-orderby
+mixin catalog-orderby(option)
+    option(value='popularity' selected='selected')= option
+//- pagination
+mixin pagination(link)
+    li
+        a(href="#")= link
+//- category-product
+mixin category-product(link)
+    li
+        i.fas.fa-chevron-right
+        a(href="#" class="category__product--link")= link
+//- category-color
+mixin category-color(color,name)
+    .category__list-color
+        span(class=`category__list-color--bg bg-${color}`)
+        a(href="#" class="category__list-color--name")= name
+//-Breadcrumb
+mixin breadcrumb(link)
+    .breadcrumb
+        .container
+            ul.breadcrumb__inner
+                li
+                    a(href="index.html") Home
+                li
+                    a(href="#")= link
