@@ -678,6 +678,12 @@ input[id="slide-dot3"]:checked ~ .slider__inner label[for="slide-dot3"] {
   text-align: right;
 }
 
+@media (max-width: 991px) {
+  .pagination {
+    text-align: center;
+  }
+}
+
 .pagination li {
   display: inline-block;
 }
@@ -784,6 +790,39 @@ input[id="slide-dot3"]:checked ~ .slider__inner label[for="slide-dot3"] {
   color: #898989;
   padding: 0 27px 0px 20px;
   border: 1px solid #cccccc;
+}
+
+.btn__common {
+  display: inline-block;
+  font-size: 13px;
+  padding: 14px 36px 13px 36px;
+  color: #fff;
+  line-height: normal;
+  text-transform: uppercase;
+  border-radius: 36px;
+  background-color: #59b586;
+  border: 1px solid #59b586;
+}
+
+.btn__common:hover {
+  background-color: #fff;
+  color: #59b586;
+}
+
+.btn__search, .btn__favourite {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 50px;
+  border: 1px solid #ebebeb;
+}
+
+.btn__search:hover, .btn__favourite:hover {
+  background-color: #59b586;
+  color: #fff;
 }
 
 .header {
@@ -1916,4 +1955,89 @@ input[id="slide-dot3"]:checked ~ .slider__inner label[for="slide-dot3"] {
 
 .category__article--title a:hover {
   color: #59b586;
+}
+
+.product-list__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #ebebeb;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1199px) {
+  .product-list__box {
+    display: block;
+  }
+}
+
+.product-list__img {
+  width: 33%;
+}
+
+@media (max-width: 1199px) {
+  .product-list__img {
+    width: 100%;
+  }
+}
+
+.product-list__content {
+  width: calc(100% - 33%);
+  background-color: #fff;
+  padding: 20px 15px 20px 34px;
+}
+
+@media (max-width: 1199px) {
+  .product-list__content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .product-list__content {
+    padding: 20px 15px;
+  }
+}
+
+.product-list__name {
+  margin-bottom: 0.5rem;
+}
+
+.product-list__name a {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+.product-list__evaluate {
+  margin-bottom: 0.5rem;
+}
+
+.product-list__evaluate i {
+  color: #febf01;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.product-list__price {
+  margin: 1rem 0;
+}
+
+.product-list__price span {
+  font-size: 16px;
+  color: #ed1c24;
+}
+
+.product-list__btn a {
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.product-list__btn a:last-child {
+  margin-right: 0;
+}
+
+@media (max-width: 480px) {
+  .product-list__btn a {
+    margin-right: 5px;
+  }
 }
