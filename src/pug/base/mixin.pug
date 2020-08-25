@@ -1,0 +1,102 @@
+//- title
+mixin title(h1)
+    title= h1
+//- Nav-menu
+mixin nav__menu(link)
+    case link
+        when 'Trang chủ'
+            li.menu__list
+                a(class="active menu__list--link" href='#')= link
+        when 'Sản phẩm'
+            li.menu__list
+                a(class="menu__list--link" href='#') Sản phẩm
+                    i.fa.fa-caret-down
+                ul.menu__sub
+                    li.menu__sub--list
+                        a(class="menu__sub--link" href='#') Sản phẩm 1
+                    li.menu__sub--list
+                        a(class="menu__sub--link" href='#') Sản phẩm 2
+        when 'Sản phẩm mới'
+            li.menu__list
+                a(class="menu__list--link" href='#') Sản phẩm mới
+                    i.fa.fa-caret-down
+                ul.menu__sub
+                    li.menu__sub--list
+                        a(class="menu__sub--link" href='#') Sản phẩm mới 1
+                    li.menu__sub--list
+                        a(class="menu__sub--link" href='#') Sản phẩm mới 2
+        default
+            li.menu__list
+                a(class="menu__list--link" href='#')= link
+
+//-Footer-widget
+mixin widget__list(h3,links)
+    .widget__col
+        h3.widget__title= h3
+        ul.widget__list
+            each link in links 
+                +widget__link(link)
+//- widget__link
+mixin widget__link(link)
+    li.widget__list--link
+        i.fas.fa-chevron-right
+        a(href='#')= link
+//-widget-menu
+mixin widget__menu(link)
+    a(href='#' class="widget__menu--link")= link
+//-Product-grid
+mixin product-grid(img,sale,sl,h3,p_old,p_current)
+    .product-grid__box
+        .product-grid__img
+            a(href="#")
+                img(src=`../../../assets/images/product/${img}.png` alt='images')
+            span(class=`product-grid__label--${sale}`)= sl
+            .product-grid__overlay
+            .product-grid__link
+                a(href="#" class="product-grid__link--buynow") mua ngay
+                a(href="#" class="product-grid__link--preview")
+                        i.fa.fa-search
+        .product-grid__content
+            h3.product-grid__content--name
+                a(href="#")= h3
+        .product-grid__evaluate
+            i.fa.fa-star(aria-hidden='true')
+            i.fa.fa-star(aria-hidden='true')
+            i.fa.fa-star(aria-hidden='true')
+            i.fa.fa-star(aria-hidden='true')
+            i.fa.fa-star-half-o(aria-hidden='true')
+        .product-grid__price
+            span.product-grid__price--sale= p_old
+            span.product-grid__price--old= p_current
+
+
+//-ProductSale
+mixin product-sale(img,h3,p_current)
+    .product-sale__box
+        .product-sale__img
+            a(href="#")
+                img(src=`../../../assets/images/product/${img}.png` alt='images')
+        .product-sale__content
+            h3.product-sale__name
+                a(href="#")= h3
+            .product-sale__evaluate
+                i.fa.fa-star(aria-hidden='true')
+                i.fa.fa-star(aria-hidden='true')
+                i.fa.fa-star(aria-hidden='true')
+                i.fa.fa-star(aria-hidden='true')
+                i.fa.fa-star-half-o(aria-hidden='true')
+            .product-sale__price
+                span.current-price= p_current
+//-Blog
+mixin blog-grid(img,time,h3,des)
+    article.blog-grid__box 
+        .blog-grid__img
+            a(href="#")
+                    img(src=`../../../assets/images/blog/${img}.jpg` alt='images')
+        .blog-grid__content
+            span.blog-grid__time=time
+            h3.blog-grid__title
+                a(href="#")=h3
+            p= des
+            .blog-grid__read-more
+                a(href="#") Đọc tiếp

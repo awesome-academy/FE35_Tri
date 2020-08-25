@@ -1,3 +1,10 @@
 extends ../layouts/default-layout.pug
+block title
+  +title('Green Shop | Home Page')
 block content
-  h1 Hello my name!!!
+    include ../partials/slider.pug
+    include ./pageHome/feature.pug
+    include ./pageHome/pagesale.pug
+    include ../partials/banner.pug
+    include ./pageHome/product-new.pug
+    include ./pageHome/blog.pug
