@@ -148,3 +148,15 @@ mixin product-list(img,h3,des,p_current)
                     i.fa.fa-search
                 a(href="#" class="btn__favourite")
                     i.fa.fa-heart
+//-Grid-details
+mixin img-detail(img)
+    a(href="#")
+        img(src=`../../../assets/images/product/${img}.png` alt='images')
+//-List-icon
+mixin list-icon(stt,index,icon1,icon2,content,tag,number)
+    li(class = `list__common--${stt}`)
+        .list
+            div(class =`list-1 list-${index}`)
+                i(class = `fa${icon1} fa-${icon2}`)
+                a(href="#")= content
+            div(class = `${tag}`)= number
