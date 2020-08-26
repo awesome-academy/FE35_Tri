@@ -1,5 +1,8 @@
 .pagination {
     text-align: right;
+    @include res("md"){
+        text-align: center;
+    }
     li {
         display: inline-block;
         a {

@@ -64,7 +64,7 @@ mixin product-grid(img,sale,sl,h3,p_old,p_current)
             i.fa.fa-star(aria-hidden='true')
             i.fa.fa-star(aria-hidden='true')
             i.fa.fa-star(aria-hidden='true')
-            i.fa.fa-star-half-o(aria-hidden='true')
+            i.fas.fa-star-half-alt(aria-hidden='true')
         .product-grid__price
             span.product-grid__price--sale= p_old
             span.product-grid__price--old= p_current
@@ -82,7 +82,7 @@ mixin product-sale(img,h3,p_current)
                 i.fa.fa-star(aria-hidden='true')
                 i.fa.fa-star(aria-hidden='true')
                 i.fa.fa-star(aria-hidden='true')
-                i.fa.fa-star-half-o(aria-hidden='true')
+                i.fas.fa-star-half-alt(aria-hidden='true')
             .product-sale__price
                 span.current-price= p_current
 //-Blog
@@ -124,3 +124,27 @@ mixin breadcrumb(link)
                     a(href="index.html") Home
                 li
                     a(href="#")= link
+//-Product-list
+mixin product-list(img,h3,des,p_current)
+    .product-list__box
+        .product-list__img
+            a(href="#")
+                img(src=`../../../assets/images/product/${img}.png` alt='images')
+        .product-list__content
+            h3.product-list__name
+                a(href="#")= h3
+            .product-list__evaluate
+                i.fa.fa-star(aria-hidden='true')
+                i.fa.fa-star(aria-hidden='true')
+                i.fa.fa-star(aria-hidden='true')
+                i.fa.fa-star(aria-hidden='true')
+                i.fa.fa-star(aria-hidden='true')
+            p= des
+            .product-list__price
+                span.current-price= p_current
+            .product-list__btn
+                a(href="#" class="btn__common") mua ngay
+                a(href="#" class="btn__search") 
+                    i.fa.fa-search
+                a(href="#" class="btn__favourite")
+                    i.fa.fa-heart
