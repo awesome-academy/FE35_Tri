@@ -160,3 +160,28 @@ mixin list-icon(stt,index,icon1,icon2,content,tag,number)
                 i(class = `fa${icon1} fa-${icon2}`)
                 a(href="#")= content
             div(class = `${tag}`)= number
+//-Cart
+mixin cart__body(img,name,initial,qty)
+    tr
+        td.cart__product--img
+            a(href='#')
+                img(src=`../../../assets/images/product/${img}.png` alt='images')
+        td.cart__product--name(data-title='tên sản phẩm')
+            a(href='#')= name
+        td.cart__product--price(data-title='đơn giá')
+            span.unit-amount= `${initial}.000 đ`
+        td.cart__product--quantity(data-title='số lượng')
+            span.input-counter= qty
+        td.cart__product--total(data-title='thành tiền')
+            span.subtotal-amount= `${initial*qty}.000 đ`
+        td.cart__product--remove(data-title='xóa')
+            a(href='#')
+                i.fa.fa.fa-trash
+//- Columns-Cart
+mixin cart-columns(id,content)
+    th(class= `cart__columns--${id}`)= content
+//- Table-Pay
+mixin table-pay(name, content1,content2)
+    tr(class = `${name}`)
+        td= content1
+        td= content2
