@@ -2,6 +2,7 @@
 .has-sidebar {
     &__flex {
         display: flex;
+        margin-top: 30px;
         @include res("sm") {
             display: unset;
         }

@@ -1,10 +1,10 @@
 .pagination {
     text-align: right;
-    @include res("md"){
-        text-align: center;
+    @include res("xs"){
+        white-space: nowrap;
     }
     li {
-        display: inline-block;
+        display: inline;
         a {
             display: inline-block;
             padding: 12px 17px 13px 18px;
@@ -21,7 +21,22 @@
             &:hover {
                 color: $cl_white;
                 background-color: $cl_m;
+                border: 1px solid $cl_m;
             }
+            @include res("md") {
+                margin:0 0 7px 7px ;
+            }
+            @include res("mbs") {
+                padding: 6px 8px 6px 8px;
+                font-size: 12px;
+                margin:0 0 5px 5px ;
+            }
+            @include res("mbl") {
+                padding: 6px 10px 6px 10px;
+                font-size: 13px;
+                margin:0 0 5px 5px ;
+            }
+
         }
     }
 }
