@@ -1,0 +1,27 @@
+.shop-cart
+    .container
+        h2.title__head Giỏ hàng
+        form.cart__form(action='#')
+            table.cart__table
+                thead.cart__columns
+                    tr
+                        +cart-columns('img', 'hình ảnh')
+                        +cart-columns('name', 'tên sản phẩm')
+                        +cart-columns('price', 'đơn giá')
+                        +cart-columns('quatity', 'số lượng')
+                        +cart-columns('total', 'thành tiền')
+                        +cart-columns('remove', 'xóa')
+                tbody.cart__product
+                    +cart__body('15','cây văn phòng',270,1)
+                    +cart__body('15','cây văn phòng',270,2)
+                    +cart__body('15','cây văn phòng',270,3)
+            .cart__btn
+                button.btn__common hủy đơn hàng
+                button.btn__common tiếp tục mua
+        form.cart__pay(action='#')  
+            table
+                +table-pay('','tổng tiền (chưa thuế)','270.000 đ')
+                +table-pay('','thuế (vat 10%)','27.000 đ')
+                +table-pay('cart__pay--background','Tổng phải thanh toán','297.000 đ')
+            .cart__btn2
+                button.btn__common thanh toán

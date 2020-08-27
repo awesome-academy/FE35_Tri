@@ -25,4 +25,11 @@
             
         }
     }
+    &__head {
+        font-size: 18px;
+        font-weight: 700;
+        color: $cl_m;
+        margin-bottom: 70px;
+        text-transform: uppercase;
+    }
 }
