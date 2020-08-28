@@ -90,7 +90,7 @@ mixin blog-grid(img,time,h3,des)
     article.blog-grid__box 
         .blog-grid__img
             a(href="#")
-                    img(src=`../../../assets/images/blog/${img}.jpg` alt='images')
+                img(src=`../../../assets/images/blog/${img}.jpg` alt='images')
         .blog-grid__content
             span.blog-grid__time=time
             h3.blog-grid__title
@@ -185,3 +185,34 @@ mixin table-pay(name, content1,content2)
     tr(class = `${name}`)
         td= content1
         td= content2
+//-blog-new
+mixin blog-new(img,content)
+    li
+        .category__article--img
+            img(src=`../../../assets/images/product/${img}.png` alt="images")
+        h4.category__article--title
+            a(href="#")= content
+//-Blog-tag
+mixin blog-tag(content)
+    a(href="#")= content
+mixin blog-content(title,img,content)
+    article.blog
+        .blog__title
+            a(href='#')= title
+        ul.blog__post
+            li.blog__post--date
+                span
+                    i.fas.fa-calendar-week
+                a(href='#') 20/12/2015
+            li.blog__post--time
+                span
+                    i.far.fa-clock
+                a(href='#') 11:20:00 AM
+            li.blog__post--comment
+                span
+                    i.far.fa-comment-dots
+                a(href='#') 0 Bình luận
+        .blog__img
+            a(href='#')
+                img(src=`../../../assets/images/blog/${img}.jpg` alt='images')
+        p= content
