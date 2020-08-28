@@ -196,7 +196,7 @@ mixin blog-new(img,content)
 mixin blog-tag(content)
     a(href="#")= content
 mixin blog-content(title,img,content)
-    article.blog
+    article
         .blog__title
             a(href='#')= title
         ul.blog__post
@@ -216,3 +216,19 @@ mixin blog-content(title,img,content)
             a(href='#')
                 img(src=`../../../assets/images/blog/${img}.jpg` alt='images')
         p= content
+//-Comment
+mixin comment(img,name,des,time)
+    .comment-box
+        .comment-box__avatar
+            img(src=`../../../assets/images/blog/${img}.jpg` alt='images')
+        .comment-box__content
+            h3.comment-box__content--name= name
+            p.description= des
+            .comment-box__content--time
+                span.time= time
+        .comment-box__reply
+            a(href='#') Trả lời
+//-form
+mixin form(placeholder)
+    .w-comment__top--input
+        input(placeholder=`${placeholder}` type='text')

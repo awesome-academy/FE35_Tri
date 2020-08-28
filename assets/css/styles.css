@@ -595,6 +595,14 @@ input[id="slide-dot3"]:checked ~ .slider__inner label[for="slide-dot3"] {
   text-transform: uppercase;
 }
 
+.title__small {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #363533;
+  margin-bottom: 30px;
+}
+
 .product-new {
   padding: 50px 0;
 }
@@ -2713,4 +2721,110 @@ input[id="slide-dot3"]:checked ~ .slider__inner label[for="slide-dot3"] {
   .blog__img img {
     height: 250px;
   }
+}
+
+p {
+  margin: 15px 0;
+}
+
+.comment__list li:first-child .comment-box__content, .comment__list li:first-child .comment-box__reply {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.comment__list li:last-child .comment-box {
+  padding: 30px 0;
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+}
+
+.comment__list--reply {
+  padding-left: 80px;
+}
+
+.comment-box {
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comment-box__avatar {
+  padding-right: 30px;
+}
+
+.comment-box__content--name {
+  font-size: 14px;
+  color: #363636;
+  margin-bottom: -5px;
+}
+
+.comment-box__content--time .time {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.comment-box__reply a {
+  font-size: 14px;
+  white-space: nowrap;
+  font-style: italic;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.w-comment__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  .w-comment__top {
+    display: unset;
+    margin-bottom: 10px;
+  }
+}
+
+.w-comment__top--input {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.w-comment__top--input input {
+  font-size: 14px;
+}
+
+.w-comment__top--input:not(:last-child) {
+  margin-right: 30px;
+}
+
+@media (max-width: 991px) {
+  .w-comment__top--input:not(:last-child) {
+    margin-right: unset;
+    margin-bottom: 10px;
+  }
+}
+
+.w-comment__bottom {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  .w-comment__bottom {
+    margin-top: 10px;
+  }
+}
+
+.w-comment__bottom textarea {
+  font-size: 12px;
+  height: 146px;
+}
+
+.w-comment__btn {
+  text-align: right;
+}
+
+.w-comment__btn button {
+  padding: 14px 70px;
 }
