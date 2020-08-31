@@ -1500,6 +1500,14 @@ input[id="slide-dot3"]:checked ~ .slider__inner label[for="slide-dot3"] {
   color: white;
 }
 
+.widget__detail--contact .icon__footer--mobile a i {
+  display: grid;
+  height: 45px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .widget__detail--contact .icon__footer--email {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1513,6 +1521,14 @@ input[id="slide-dot3"]:checked ~ .slider__inner label[for="slide-dot3"] {
 
 .widget__detail--contact .icon__footer--email a:hover {
   color: white;
+}
+
+.widget__detail--contact .icon__footer--email a i {
+  display: grid;
+  height: 45px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .widget__detail--wrap {
@@ -2911,4 +2927,64 @@ p {
 .register__right button {
   margin-top: 30px;
   display: block;
+}
+
+.contact__map {
+  margin-bottom: 50px;
+}
+
+.contact__form {
+  margin-bottom: 80px;
+}
+
+.contact__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+@media (max-width: 991px) {
+  .contact__columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+}
+
+.contact__right img {
+  margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+  .contact__right img {
+    margin-top: unset;
+  }
+}
+
+.contact__right span {
+  display: block;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.contact__icon {
+  margin-top: 20px;
+}
+
+.contact__icon--mobile, .contact__icon--email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact__icon--mobile a, .contact__icon--email a {
+  margin-right: 15px;
+}
+
+.contact__icon--mobile a i, .contact__icon--email a i {
+  display: grid;
+  height: 45px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
