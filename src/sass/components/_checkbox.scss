@@ -1,0 +1,23 @@
+.checkbox {
+    margin-top: 20px;
+    outline: none;
+    a {
+        font-size: 12px;
+        font-style: italic;
+        color: #898989;
+        border-bottom: 1px solid currentColor;
+        margin-left: 30px;
+        &:hover {
+          color: $cl_m;
+        }
+    }
+    &__custom {
+        cursor: pointer;
+        &--tick {
+            margin-right: 10px;
+        }
+        span {
+            vertical-align: 2px;
+        }
+    }
+}
