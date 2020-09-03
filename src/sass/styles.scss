@@ -22,7 +22,8 @@
 @import "./components/quantity";
 @import "./components/tab";
 @import "./components/category";
-
+@import "./components/form";
+@import "./components/checkbox";
 
 // Import layouts styles
 @import "./layouts/header";
@@ -50,3 +51,5 @@
 @import "./pages/pageBlog/pageBlog";
 //PageBlog
 @import "./pages/pageBlogDetails/blog-details";
+//PageRegister
+@import "./pages/pageRegister/register";

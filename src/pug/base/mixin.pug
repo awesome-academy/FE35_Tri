@@ -232,3 +232,8 @@ mixin comment(img,name,des,time)
 mixin form(placeholder)
     .w-comment__top--input
         input(placeholder=`${placeholder}` type='text')
+mixin register(label)
+    fieldset.form__group
+        label= label
+            span.required *
+        input(type='text')
