@@ -45,12 +45,25 @@
     &__right {
         display: flex;
         &--signin{
-            margin-right: 10px;
+            i {
+                padding: 8px 10px;
+                border-left: 1px solid #2b2b2b;
+                &:last-child {
+                    padding: 8px 0 !important;
+                    border: none;
+                }
+            }
         }
+        
         a {
             font-size: 12px;
             color: #898989;
+            font-family: $font_s;
+            font-weight: 400;
             padding: 8px 10px;
+            &:last-child {
+                border-right: 1px solid #2b2b2b;
+            }
             &:hover {
                 color: $cl_m;
             }
