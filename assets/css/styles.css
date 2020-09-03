@@ -1163,6 +1163,7 @@ input[id="slide-dot3"]:checked ~ .slider__inner label[for="slide-dot3"] {
 
 .checkbox {
   margin-top: 20px;
+  margin-bottom: 20px;
   outline: none;
 }
 
@@ -1172,6 +1173,8 @@ input[id="slide-dot3"]:checked ~ .slider__inner label[for="slide-dot3"] {
   color: #898989;
   border-bottom: 1px solid currentColor;
   margin-left: 30px;
+  vertical-align: 2px;
+  cursor: pointer;
 }
 
 .checkbox a:hover {
@@ -2882,10 +2885,6 @@ p {
   margin-bottom: 50px;
 }
 
-.register__form {
-  width: 90%;
-}
-
 .register__columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2903,4 +2902,13 @@ p {
 
 .register__btn button {
   margin: 0 20px 20px 0;
+}
+
+.register__right h2 {
+  margin-bottom: 20px !important;
+}
+
+.register__right button {
+  margin-top: 30px;
+  display: block;
 }
