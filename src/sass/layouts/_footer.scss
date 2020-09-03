@@ -142,6 +142,11 @@
                         &:hover {
                             color: white;
                         }
+                        i {
+                            display: grid;
+                            height: 45px;
+                            align-items: center;
+                        }
                     }
                 }
                 &--email{
@@ -151,6 +156,11 @@
                         margin-right: 10px;
                         &:hover {
                             color: white;
+                        }
+                        i {
+                            display: grid;
+                            height: 45px;
+                            align-items: center;
                         }
                     }
                 }
