@@ -10,10 +10,10 @@
         }
         @include res("sm") {
             color: $cl_m;
-            position: relative;
         }
         &--wrap{
-            @include d-grid(1fr 1fr 1fr);
+            @include d-grid(1.5fr 1fr 2fr);
+            grid-gap: 15px !important;
             @include res("md") {
                 @include d-grid(1fr);
             }
@@ -23,24 +23,17 @@
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 700;
-        @include res("sm") {
-            font-size: 20px;
-            display: flex;
-            margin-top: 25px;
-        }
         p {
             margin-bottom: 0.5rem;
 
             @include res("md") {
-                font-size: 20px;
+                font-size: 18px;
+                text-align: left;
             }
         }
         &--social{
             @include res("sm"){
-                position: relative;
-                bottom: -14px;
-                left: -330px;
-
+                text-align: left;
                 margin-top: 15px;
             }
             a {
@@ -60,23 +53,25 @@
                 }
             }
         }
-        &--signin{
-            margin-bottom: 0.5rem;
+        &--email{
+            margin-top: 15px;
+            width: 150px;
             @include res("sm"){
                 margin-right: 5px;
-               
+                width: 100%;
+                font-size: 18px;
+                text-align: left;
             }
         }
     }
     &__search{
-        position: relative;
-        left: -140px;
-        width: 100%;
-
         font-size: 300px !important;
+        position: relative;
+        margin-top: 10px;
         @include res("md") {
-            width: 640px;
-            
+            width: auto;
+            text-align: center;
+            margin-top: 0;
         }
         &--subcribe{
             .btn-subcribe{
@@ -131,6 +126,9 @@
             margin: 1rem 0;
         }
         &--contact {
+            @include res("xs") {
+                display: none;
+            }
             .icon__footer{
                 &--mobile{
                     margin-bottom: 1rem;
